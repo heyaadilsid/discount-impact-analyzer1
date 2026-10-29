@@ -1,6 +1,21 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "npm ci --prefix backend && npm ci --prefix mp",
-  "buildCommand": "npm run build --prefix mp",
-  "outputDirectory": "mp/dist"
+  "services": {
+    "backend": {
+      "root": "backend",
+      "framework": "express"
+    },
+    "mp": {
+      "root": "mp",
+      "framework": "vite"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "backend"
+      }
+    }
+  ]
 }
