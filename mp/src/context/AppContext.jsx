@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { calculateAnalysis } from '../utils/calculations';
-import { api } from '../services/api';
+import { api, API_BASE_URL } from '../services/api';
 
 const AppContext = createContext();
 
@@ -161,7 +161,7 @@ export function AppProvider({ children }) {
   useEffect(() => {
     async function initSession() {
       try {
-        const healthRes = await fetch('http://localhost:5000/api/health');
+        const healthRes = await fetch(`${API_BASE_URL}/health`);
         if (healthRes.ok) {
           setBackendConnected(true);
         }
