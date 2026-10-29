@@ -1,0 +1,230 @@
+{
+  "users": [
+    {
+      "_id": "demo_user_001",
+      "name": "Arjun Verma",
+      "email": "arjun@retailstore.com",
+      "password": "$2a$10$bPFlTjUwznfNm4soe5ulbec4P0GO9gMtblF.ueSKWmwY4jWE6yvYy",
+      "storeName": "Arjun's Store",
+      "workspaceName": "Retail Workspace",
+      "role": "Store Manager",
+      "currency": "INR",
+      "createdAt": "2026-10-27T07:50:02.748Z"
+    },
+    {
+      "_id": "local_mvqdxyuw0py3",
+      "name": "kunal",
+      "email": "any@gmail.com",
+      "password": "$2a$10$NnTc.XqFiChk737Vi/Hd8OJ5V7rrP0r.jfBG6.ANyloTa3zHVPRbi",
+      "storeName": "model",
+      "workspaceName": "Retail Workspace",
+      "role": "Store Manager",
+      "currency": "INR",
+      "createdAt": "2026-10-27T07:50:02.936Z"
+    }
+  ],
+  "analyses": {
+    "demo_user_001": [
+      {
+        "id": "RUN-2024-001",
+        "campaign": "Festive Clearance — Everyday Backpack",
+        "edition": "Canvas Edition",
+        "category": "Travel Gear",
+        "sku": "BP-102",
+        "horizon": "7-Day Flash",
+        "basePrice": 1000,
+        "cost": 600,
+        "baseVolume": 100,
+        "discountPercent": 10,
+        "volumeUpliftPercent": 35,
+        "status": "Sustainable",
+        "updated": "Today, 14:20"
+      },
+      {
+        "id": "RUN-2024-002",
+        "campaign": "End of Season — Merino Wool Overshirt",
+        "edition": "Charcoal Grey (L/XL)",
+        "category": "Apparel",
+        "sku": "AP-409",
+        "horizon": "30-Day",
+        "basePrice": 2400,
+        "cost": 1500,
+        "baseVolume": 67,
+        "discountPercent": 20,
+        "volumeUpliftPercent": 25,
+        "status": "Margin Dilution Alert",
+        "updated": "Yesterday"
+      },
+      {
+        "id": "RUN-2024-003",
+        "campaign": "Weekend Flash — Minimalist Ceramic Mug",
+        "edition": "Set of 2 (Matte Clay)",
+        "category": "Home Goods",
+        "sku": "HG-882",
+        "horizon": "Weekend",
+        "basePrice": 800,
+        "cost": 320,
+        "baseVolume": 100,
+        "discountPercent": 15,
+        "volumeUpliftPercent": 35,
+        "status": "Sustainable",
+        "updated": "3 days ago"
+      },
+      {
+        "id": "RUN-2024-004",
+        "campaign": "VIP Loyalty Drop — Leather Desk Mat",
+        "edition": "Saddle Brown (XL)",
+        "category": "Workspace",
+        "sku": "WS-330",
+        "horizon": "Quarterly",
+        "basePrice": 1500,
+        "cost": 1100,
+        "baseVolume": 200,
+        "discountPercent": 12,
+        "volumeUpliftPercent": 25,
+        "status": "Sustainable",
+        "updated": "Oct 12"
+      }
+    ],
+    "local_mvqdxyuw0py3": [
+      {
+        "id": "RUN-2936-34",
+        "campaign": "Festive Clearance — Everyday Backpack",
+        "edition": "Canvas Edition",
+        "category": "Travel Gear",
+        "sku": "BP-102",
+        "horizon": "7-Day Flash",
+        "basePrice": 1000,
+        "cost": 600,
+        "baseVolume": 100,
+        "discountPercent": 10,
+        "volumeUpliftPercent": 35,
+        "status": "Sustainable",
+        "updated": "Today, 14:20"
+      },
+      {
+        "id": "RUN-2936-96",
+        "campaign": "End of Season — Merino Wool Overshirt",
+        "edition": "Charcoal Grey (L/XL)",
+        "category": "Apparel",
+        "sku": "AP-409",
+        "horizon": "30-Day",
+        "basePrice": 2400,
+        "cost": 1500,
+        "baseVolume": 67,
+        "discountPercent": 20,
+        "volumeUpliftPercent": 25,
+        "status": "Margin Dilution Alert",
+        "updated": "Yesterday"
+      },
+      {
+        "id": "RUN-2936-99",
+        "campaign": "Weekend Flash — Minimalist Ceramic Mug",
+        "edition": "Set of 2 (Matte Clay)",
+        "category": "Home Goods",
+        "sku": "HG-882",
+        "horizon": "Weekend",
+        "basePrice": 800,
+        "cost": 320,
+        "baseVolume": 100,
+        "discountPercent": 15,
+        "volumeUpliftPercent": 35,
+        "status": "Sustainable",
+        "updated": "3 days ago"
+      },
+      {
+        "id": "RUN-2936-73",
+        "campaign": "VIP Loyalty Drop — Leather Desk Mat",
+        "edition": "Saddle Brown (XL)",
+        "category": "Workspace",
+        "sku": "WS-330",
+        "horizon": "Quarterly",
+        "basePrice": 1500,
+        "cost": 1100,
+        "baseVolume": 200,
+        "discountPercent": 12,
+        "volumeUpliftPercent": 25,
+        "status": "Sustainable",
+        "updated": "Oct 12"
+      }
+    ]
+  },
+  "scenarios": {
+    "demo_user_001": {
+      "name": "Everyday Backpack (Canvas Edition)",
+      "horizon": "7-Day Flash",
+      "sku": "EBP-CV-019",
+      "basePrice": 1000,
+      "cost": 600,
+      "baseVolume": 100,
+      "tiers": [
+        {
+          "id": "tier-0",
+          "name": "Baseline (Status Quo)",
+          "discountPercent": 0,
+          "volumeUpliftPercent": 0,
+          "isBaseline": true
+        },
+        {
+          "id": "tier-a",
+          "name": "Tier A: 5% Flash",
+          "discountPercent": 5,
+          "volumeUpliftPercent": 15,
+          "isBaseline": false
+        },
+        {
+          "id": "tier-b",
+          "name": "Tier B: 10% Standard",
+          "discountPercent": 10,
+          "volumeUpliftPercent": 35,
+          "isBaseline": false
+        },
+        {
+          "id": "tier-c",
+          "name": "Tier C: 20% Aggressive",
+          "discountPercent": 20,
+          "volumeUpliftPercent": 60,
+          "isBaseline": false
+        }
+      ]
+    },
+    "local_mvqdxyuw0py3": {
+      "name": "Everyday Backpack (Canvas Edition)",
+      "horizon": "7-Day Flash",
+      "sku": "EBP-CV-019",
+      "basePrice": 1000,
+      "cost": 600,
+      "baseVolume": 100,
+      "tiers": [
+        {
+          "id": "tier-0",
+          "name": "Baseline (Status Quo)",
+          "discountPercent": 0,
+          "volumeUpliftPercent": 0,
+          "isBaseline": true
+        },
+        {
+          "id": "tier-a",
+          "name": "Tier A: 5% Flash",
+          "discountPercent": 5,
+          "volumeUpliftPercent": 15,
+          "isBaseline": false
+        },
+        {
+          "id": "tier-b",
+          "name": "Tier B: 10% Standard",
+          "discountPercent": 10,
+          "volumeUpliftPercent": 35,
+          "isBaseline": false
+        },
+        {
+          "id": "tier-c",
+          "name": "Tier C: 20% Aggressive",
+          "discountPercent": 20,
+          "volumeUpliftPercent": 60,
+          "isBaseline": false
+        }
+      ]
+    }
+  }
+}
